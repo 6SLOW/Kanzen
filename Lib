@@ -1,5 +1,5 @@
 local library = {
-	Version = "0.36",
+	Version = "UNFINISHED",
 	WorkspaceName = "Kanzen's Lib",
 	flags = {},
 	signals = {},
@@ -7011,7 +7011,7 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Library by Kanzen#5229 "
+				Text = "Library by Kanzen  "
 			}}
 		elseif "Gee, thanks for your support." then
 		end
