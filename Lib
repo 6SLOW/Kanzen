@@ -1,5 +1,4 @@
 local library = {
-	Version = "UNFINISHED",
 	WorkspaceName = "Kanzen's Lib",
 	flags = {},
 	signals = {},
