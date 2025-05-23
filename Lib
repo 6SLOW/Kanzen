@@ -164,28 +164,28 @@ local function resolveid(image, flag)
 								end
 							end)
 							codename = string.sub(codename, 1, 24) .. tostring(fixes)
-							local fold = isfolder("./Kanzen Lib")
+							local fold = isfolder("./Kanzen")
 							if fold then
 							else
-								makefolder("./Kanzen Lib")
+								makefolder("./Kanzen")
 							end
-							fold = isfolder("./Kanzen Lib/Themes")
+							fold = isfolder("./Kanzen/Themes")
 							if fold then
 							else
-								makefolder("./Kanzen Lib/Themes")
+								makefolder("./Kanzen/Themes")
 							end
-							fold = isfolder("./Kanzen Lib/Themes/SynapseAssetsCache")
+							fold = isfolder("./Kanzen/Themes/SynapseAssetsCache")
 							if fold then
 							else
-								makefolder("./Kanzen Lib Themes/SynapseAssetsCache")
+								makefolder("./Kanzen Themes/SynapseAssetsCache")
 							end
-							if not fold or not isfile("./Kanzen Lib/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
+							if not fold or not isfile("./Kanzen/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
 								local res = game:HttpGet(string.sub(image, 15))
 								if res ~= nil then
-									writefile("./Kanzen Lib/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
+									writefile("./Kanzen/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
 								end
 							end
-							return getsynasset(readfile("./Kanzen Lib/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
+							return getsynasset(readfile("./Kanzen/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
 						end)
 						if x and e ~= nil then
 							return e
